@@ -5,9 +5,9 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.Servo;
 
-@TeleOp(name="TeleJeremy", group="Linear Opmode")
+@TeleOp(name="TeleJeremyReboot", group="Linear Opmode")
 
-public class TeleJeremy extends LinearOpMode {
+public class TeleJeremyReboot extends LinearOpMode {
 
     private DcMotor motor1 = null;
     private DcMotor motor2 = null;
