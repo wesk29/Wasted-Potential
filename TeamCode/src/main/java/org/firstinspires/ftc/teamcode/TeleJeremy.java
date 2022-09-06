@@ -54,9 +54,10 @@ public class TeleJeremy extends LinearOpMode {
             double m3Power;
             double m4Power;
 
-            m1Power = -gamepad1.right_stick_y * -.5;
+            // Forward and Backward (Left Stick)
+            m1Power = -gamepad1.left_stick_y * -.5;
             m2Power = -gamepad1.left_stick_y * -.5;
-            m3Power = -gamepad1.right_stick_y * -.5;
+            m3Power = -gamepad1.left_stick_y * -.5;
             m4Power = -gamepad1.left_stick_y * -.5;
 
             motor1.setPower(m1Power);
@@ -66,6 +67,8 @@ public class TeleJeremy extends LinearOpMode {
 
             double G1rightStickY = gamepad1.right_stick_y;
             double G1leftStickY = gamepad1.left_stick_y;
+            double G1rightStickX = gamepad1.right_stick_x;
+            double G1leftStickX = gamepad1.left_stick_x;
             double G1rightTrigger = -gamepad1.right_trigger;
             double G1leftTrigger = -gamepad1.left_trigger;
             boolean G1rightBumper = gamepad1.right_bumper;
@@ -81,7 +84,8 @@ public class TeleJeremy extends LinearOpMode {
             boolean G1DPD = gamepad1.dpad_down;
 
             //Strafe
-            if (G1rightBumper) { //strafe right
+            /*
+            if (G1leftStickX) { //strafe right
                 motor1.setPower(-1);
                 motor2.setPower(1);
                 motor3.setPower(1);
@@ -91,9 +95,9 @@ public class TeleJeremy extends LinearOpMode {
                 motor1.setPower(1);
                 motor2.setPower(-1);
                 motor3.setPower(-1);
-                motor4.setPower(1);
+                motor4.setPower(1);*/
 
-
+            /*
                 //Duck Spinner
             } else if (G1DPL) {  //spin counterclockwise
                 duckyM.setPower(.7);
@@ -101,7 +105,7 @@ public class TeleJeremy extends LinearOpMode {
                 sleep(1);
                 duckyM.setPower(0);
                 duckyM2.setPower(0);
-/*
+            /*
                 //Intake
             } else if (gamepad1.a) {  //intake
                 betterFlapper.setPosition(0.25);
